@@ -19,3 +19,5 @@ Route::post('/login', 'App\Http\Controllers\User\UserController@login');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('template', 'App\Http\Controllers\Template\TemplateController@get');
