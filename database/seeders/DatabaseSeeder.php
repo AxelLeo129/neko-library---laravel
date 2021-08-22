@@ -17,8 +17,12 @@ class DatabaseSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
         DB::table('template')->truncate();
+        DB::table('categorias')->truncate();
+        DB::table('subcategorias')->truncate();
         Schema::enableForeignKeyConstraints();
 
         $this->call(TemplateSeed::class);
+        $this->call(CategoriaSeed::class);
+        $this->call(SubcategoriaSeed::class);
     }
 }

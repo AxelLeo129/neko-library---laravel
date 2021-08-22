@@ -21,3 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('template', 'App\Http\Controllers\Template\TemplateController@get');
+Route::get('categorias-subcategorias', 'App\Http\Controllers\Categoria\CategoriaController@listCategoriesAndSubcategories');
+Route::get('verificar-categoria/{ruta}', 'App\Http\Controllers\Categoria\CategoriaController@verifyRouteCategory');
+Route::get('verificar-subcategoria/{ruta}', 'App\Http\Controllers\Categoria\CategoriaController@verifyRouteSubcategory');
