@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        DB::table('template')->truncate();
-        DB::table('categorias')->truncate();
-        DB::table('subcategorias')->truncate();
+        DB::table('modello')->truncate();
+        DB::table('categorie')->truncate();
+        DB::table('sottocategorie')->truncate();
         Schema::enableForeignKeyConstraints();
 
-        $this->call(TemplateSeed::class);
+        $this->call(ModelloSeed::class);
         $this->call(CategoriaSeed::class);
-        $this->call(SubcategoriaSeed::class);
+        $this->call(SottocategoriaSeed::class);
     }
 }

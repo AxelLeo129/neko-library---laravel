@@ -14,33 +14,33 @@ class CategoriaSeed extends Seeder
      */
     public function run()
     {
-        DB::table('categorias')->insert(array(
-            'nombre' => 'ROPA',
-            'ruta' => 'ropa',
+        DB::table('categorie')->insert(array(
+            'nome' => 'ROPA',
+            'rotta' => 'ropa',
             'created_at' => '2021-08-17 22:09:10'
         ));
 
-        DB::table('categorias')->insert(array(
-            'nombre' => 'CALZADO',
-            'ruta' => 'calzado',
+        DB::table('categorie')->insert(array(
+            'nome' => 'CALZADO',
+            'rotta' => 'calzado',
             'created_at' => '2021-08-17 22:09:10'
         ));
 
-        DB::table('categorias')->insert(array(
-            'nombre' => 'ACCESORIOS',
-            'ruta' => 'accesorios',
+        DB::table('categorie')->insert(array(
+            'nome' => 'ACCESORIOS',
+            'rotta' => 'accesorios',
             'created_at' => '2021-08-17 22:09:10'
         ));
 
-        DB::table('categorias')->insert(array(
-            'nombre' => 'TECNOLOGÍA',
-            'ruta' => 'tecnologia',
+        DB::table('categorie')->insert(array(
+            'nome' => 'TECNOLOGÍA',
+            'rotta' => 'tecnologia',
             'created_at' => '2021-08-17 22:09:10'
         ));
 
-        DB::table('categorias')->insert(array(
-            'nombre' => 'CURSOS',
-            'ruta' => 'cursos',
+        DB::table('categorie')->insert(array(
+            'nome' => 'CURSOS',
+            'rotta' => 'cursos',
             'created_at' => '2021-08-17 22:09:10'
         ));
     }

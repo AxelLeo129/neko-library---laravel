@@ -13,15 +13,15 @@ class CreateTemplateTable extends Migration
      */
     public function up()
     {
-        Schema::create('template', function (Blueprint $table) {
+        Schema::create('modello', function (Blueprint $table) {
             $table->id();
-            $table->text('barra_superior');
-            $table->text('texto_superior');
-            $table->text('color_fondo');
-            $table->text('color_texto');
+            $table->text('barra_alto');
+            $table->text('testo_alto');
+            $table->text('colore_sfondo');
+            $table->text('colore_testo');
             $table->text('logo');
-            $table->text('icono');
-            $table->text('redes_sociales');
+            $table->text('icona');
+            $table->text('social_networks');
             $table->timestamps();
 
         });
@@ -34,6 +34,6 @@ class CreateTemplateTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('template');
+        Schema::dropIfExists('modello');
     }
 }

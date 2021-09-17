@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Template;
+namespace App\Http\Controllers\Modello;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Template;
+use App\Models\Modello;
 
-class TemplateController extends Controller
+class ModelloController extends Controller
 {
     public function get() {
         try {
-            $template = Template::first();
-            return response($template, 200);
+            $modello = Modello::first();
+            return response($modello, 200);
         } catch (\Exception $e) {
             return response(['result' => 'fail', 'message' => $e->getMessage()], 500);
         }
