@@ -19,10 +19,12 @@ class DatabaseSeeder extends Seeder
         DB::table('modello')->truncate();
         DB::table('categorie')->truncate();
         DB::table('sottocategorie')->truncate();
+        DB::table('cursore')->truncate();
         Schema::enableForeignKeyConstraints();
 
         $this->call(ModelloSeed::class);
         $this->call(CategoriaSeed::class);
         $this->call(SottocategoriaSeed::class);
+        $this->call(CursoreSeed::class);
     }
 }
