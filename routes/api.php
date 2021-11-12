@@ -25,3 +25,4 @@ Route::get('categorias-subcategorias', 'App\Http\Controllers\Categoria\Categoria
 Route::get('verificar-categoria/{ruta}', 'App\Http\Controllers\Categoria\CategoriaController@verifyRouteCategory');
 Route::get('verificar-subcategoria/{ruta}', 'App\Http\Controllers\Categoria\CategoriaController@verifyRouteSubcategory');
 Route::get('slider', 'App\Http\Controllers\Cursore\CursoreController@list');
+Route::get('products', 'App\Http\Controllers\Prodotto\ProdottoController@list');
