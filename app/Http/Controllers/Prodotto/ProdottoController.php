@@ -19,4 +19,14 @@ class ProdottoController extends Controller
             return response(['result' => 'fail', 'message' => $e->getMessage()], 500);
         }
     }
+
+    public function verifyRoute($ruta) {
+        try {
+            $prodotto = Prodotto::where('rotta', $ruta)->first();
+            return response($prodotto ? $prodotto : ["mensaje" => "No encontrado"], 200);
+        } catch (\Exception $e) {
+            return response(['result' => 'fail', 'message' => $e->getMessage()], 500);
+        }
+    }
+
 }
