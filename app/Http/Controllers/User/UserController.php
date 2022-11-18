@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     public function login(Request $request) {
-        $credentials = $request->only('email', 'passport');
+        $credentials = $request->only('email', 'password');
         
         if(!Auth::attempt($credentials)) {
             return response(["message" => "Usuario y/o contraseña es invalido"], 422);
